@@ -6,7 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import ServicesGrid from "./ServiceGrid";
-
+import TruckGrid from "./Trucks";
+import ContactForm from "../ContactForm";
 const services = [
   {
     title: "Load Sourcing",
@@ -36,13 +37,27 @@ const services = [
     image:
       "https://img.freepik.com/free-vector/call-center-abstract-concept_335657-3001.jpg?w=826&t=st=1696505134~exp=1696505734~hmac=d0a8e51fc3edee34e02563337445d32ed69b504929219b7e4b1492eb1b20e982",
   },
-  // {
-  //   title: "Real-Time Tracking",
-  //   description:
-  //     "Stay in control with real-time load tracking. Know where your cargo is at all times and provide accurate delivery estimates.",
-  //   image:
-  //     "https://img.freepik.com/free-vector/post-service-tracking-illustration_335657-502.jpg?w=826&t=st=1696505176~exp=1696505776~hmac=9163cd9c16a7621afb080a958d538929ead3b1c328b80fe9546a00ca88a4ac74",
-  // },
+];
+
+const truck = [
+  {
+    title: "Dry Van",
+    description:
+      "If you need reliable dry van freight management, our professional truck dispatchers can bring you peace of mind. Contact us now.",
+    image: "https://truckdispatch360.com/wp-content/uploads/2020/07/dry-1.png",
+  },
+  {
+    title: "Flatbed/Stepdeck",
+    description:
+      "For top-tier flatbed and conestoga freight dispatch, our expert dispatchers are here to support you. Reach out today to connect with us.",
+    image: "https://truckdispatch360.com/wp-content/uploads/2020/07/flat-1.png",
+  },
+  {
+    title: "Reefer",
+    description:
+      "For reefer freight dispatch that meets your goals, our expert dispatchers can assist you. Reach out today to speak with our professionals.",
+    image: "https://truckdispatch360.com/wp-content/uploads/2020/07/ree-1.png",
+  },
 ];
 const HomeHero = () => {
   return (
@@ -99,10 +114,11 @@ const HomeHero = () => {
               />
               <div className=" text-3xl font-extrabold text-primary">
                 <NumberCounter
+                  dollar="$"
                   start={0}
                   end={50}
                   duration={2000}
-                  symbol="K$ +"
+                  symbol="K+"
                 />
               </div>
               <div className=" text-xl font-bold text-center ">
@@ -149,6 +165,17 @@ const HomeHero = () => {
           </div>
           <ServicesGrid services={services}></ServicesGrid>
         </div>
+        <hr className="w-full h-1 border-t border-gray-200 dark:border-gray-700" />
+        {/* ======================================================== */}
+        <div className="flex flex-col justify-center items-center py-9 gap-7">
+          <div className="w-full text-center font-extrabold xl:text-[3rem] lg:text-[2.7rem] sm:text-[2.5rem] text-[2rem] shadow-white drop-shadow-2xl">
+            Our Truck Dispatchers Specialize
+          </div>
+          <TruckGrid services={truck}></TruckGrid>
+        </div>
+        <hr className="w-full h-1 border-t border-gray-200 dark:border-gray-700" />
+        {/* ======================================================== */}
+        <ContactForm></ContactForm>
       </MaxWidthWrapper>
     </div>
   );
