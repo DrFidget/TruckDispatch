@@ -8,6 +8,8 @@ import { ArrowRight } from "lucide-react";
 import ServicesGrid from "./ServiceGrid";
 import TruckGrid from "./Trucks";
 import ContactForm from "../ContactForm";
+import { Footer } from "@/app/Footer";
+
 const services = [
   {
     title: "Load Sourcing",
@@ -175,8 +177,23 @@ const HomeHero = () => {
         </div>
         <hr className="w-full h-1 border-t border-gray-200 dark:border-gray-700" />
         {/* ======================================================== */}
-        <ContactForm></ContactForm>
+
+        <div className="flex flex-col justify-center items-center py-9 gap-7">
+          <div className="w-full text-center font-extrabold xl:text-[3rem] lg:text-[2.7rem] sm:text-[2.5rem] text-[2rem] shadow-white drop-shadow-2xl">
+            Contact Us Now
+          </div>
+          <MaxWidthWrapper>
+            <p className="sm:text-center text-sm  text-muted-foreground">
+              We Reply Within 24 Hours
+            </p>
+          </MaxWidthWrapper>
+          <MaxWidthWrapper>
+            <ContactForm className="w-full"></ContactForm>
+          </MaxWidthWrapper>
+        </div>
+        {/* ======================================================== */}
       </MaxWidthWrapper>
+      <Footer></Footer>
     </div>
   );
 };

@@ -12,7 +12,7 @@ interface ServicesGridProps {
 
 const TruckGrid: React.FC<ServicesGridProps> = ({ services }) => {
   return (
-    <div className="w-full flex flex-wrap justify-between">
+    <div className="w-full flex sm:flex-wrap sm:justify-between sm:flex-row flex-col items-center">
       {services.map((service) => (
         <div
           key={service.title}
