@@ -2,7 +2,7 @@ import React from "react";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import { buttonVariants } from "@/components/ui/button";
 import NumberCounter from "@/components/ui/NumberCounter";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import ServicesGrid from "./ServiceGrid";

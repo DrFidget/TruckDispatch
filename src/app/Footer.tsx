@@ -4,13 +4,14 @@ import Link from "next/link";
 import { BiLogoGmail } from "react-icons/bi";
 import { BsTelephoneInbound } from "react-icons/bs";
 import { VscLocation } from "react-icons/vsc";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import Image from "next/image";
+
 export const Footer = () => {
   return (
     <div className=" w-full h-fit bg-secondary-foreground flex flex-col gap-2">
       <MaxWidthWrapper className=" h-full">
         <div className=" h-full  w-full flex md:justify-between justify-center flex-wrap">
-          <div className=" sm:max-w-sm w-full h-fit text-white flex flex-col  pt-10 pb-14 gap-5 relative px-5">
+          <div className=" sm:max-w-sm w-full h-fit text-white flex flex-col  pt-10 pb-20 gap-5 relative px-5">
             <Link href="/" className="flex z-40 font-semibold w-fit">
               <span className="md:text-2xl text-lg">
                 <span className="text-primary font-bold ">Octane</span>
@@ -21,24 +22,48 @@ export const Footer = () => {
               Simplify Your Trucking Experience with Our Comprehensive
               Dispatching Services.
             </p>
-            <div className="w-full absolute bottom-1 flex justify-start gap-8 ">
+            <div className="w-full absolute bottom-1 flex justify-start  gap-10 ">
               <Link href="https://twitter.com/" className="hover:primary">
-                <Twitter />
+                <Image
+                  alt="twitter"
+                  src="/SocialMedia/twitter.png"
+                  height={30}
+                  width={30}
+                  quality={100}
+                />
               </Link>
               <Link href="https://facebook.com/" className="hover:primary">
-                <Facebook />
+                <Image
+                  alt="twitter"
+                  src="/SocialMedia/facebook.png"
+                  height={30}
+                  width={30}
+                  quality={100}
+                />
               </Link>
               <Link href="https://instagram.com/" className="hover:primary">
-                <Instagram />
+                <Image
+                  alt="twitter"
+                  src="/SocialMedia/instagram.png"
+                  height={30}
+                  width={30}
+                  quality={100}
+                />
               </Link>
               <Link href="https://www.linkedin.com/" className="hover:primary">
-                <Linkedin />
+                <Image
+                  alt="twitter"
+                  src="/SocialMedia/linkedin.png"
+                  height={30}
+                  width={30}
+                  quality={100}
+                />
               </Link>
             </div>
           </div>
           <div className=" sm:w-96 w-full  h-fit text-white pt-10  pb-14 relative">
             {/* <p>Links :</p> */}
-            <div className="flex flex-col ps-5">
+            <div className="flex flex-col ps-5 gap-5">
               <Link href="" className="w-fit">
                 •Home
               </Link>
@@ -53,7 +78,7 @@ export const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="sm:max-w-sm w-full h-fit text-white flex flex-col py-10 gap-5">
+          <div className="sm:max-w-sm w-full h-fit text-white flex flex-col py-10 gap-5 sm:px-0 px-5">
             <div className="flex gap-5 items-center ">
               <BiLogoGmail color="white" size="30" />
               <Link href="" className=" sm:text-lg text-sm ">
