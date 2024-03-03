@@ -116,7 +116,7 @@ const HomeHero = () => {
               />
               <div className=" text-3xl font-extrabold text-primary">
                 <NumberCounter
-                  dollar="$"
+                  startsymbol="$"
                   start={0}
                   end={50}
                   duration={2000}

@@ -2,12 +2,12 @@
 import React, { useState, useEffect } from "react";
 
 const NumberCounter: React.FC<{
-  dollar?: string;
+  startsymbol?: string;
   start: number;
   end: number;
   duration: number;
   symbol?: string;
-}> = ({ dollar, start, end, duration, symbol }) => {
+}> = ({ startsymbol, start, end, duration, symbol }) => {
   const [currentNumber, setCurrentNumber] = useState(start);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const NumberCounter: React.FC<{
 
   return (
     <div>
-      {dollar}
+      {startsymbol}
       {currentNumber.toLocaleString()}
       {symbol}
     </div>
